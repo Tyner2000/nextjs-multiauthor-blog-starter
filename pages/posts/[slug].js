@@ -4,11 +4,12 @@ import Link from 'next/link'
 import { getAllPosts, getAuthorBySlug, getPostBySlug } from '../../lib/api'
 
 export default function Post({ post }) {
-  const prettyDate = new Date(post.createdAt).toLocaleString('en-US', {
-    month: 'short',
-    day: '2-digit',
-    year: 'numeric',
-  })
+  if (post.date === "archive") {
+    var dateDisplay = "From Archive."
+  } 
+  else {
+    var dateDisplay = post.date
+  } 
 
   return (
     <div className="post">
@@ -24,7 +25,7 @@ export default function Post({ post }) {
             </Link>
           </strong>
 
-          <time dateTime={post.createdAt}>{prettyDate}</time>
+          <p>{dateDisplay}</p>
         </div>
       </div>
 

@@ -9,11 +9,12 @@ export default function Posts({ posts }) {
       <h1>Posts</h1>
 
       {posts.map(post => {
-        const prettyDate = new Date(post.createdAt).toLocaleString('en-US', {
-          month: 'short',
-          day: '2-digit',
-          year: 'numeric',
-        })
+        if (post.date === "archive") {
+          var dateDisplay = "From Archive."
+        } 
+        else {
+          var dateDisplay = post.date
+        } 
 
         return (
           <article key={post.slug}>
@@ -30,7 +31,7 @@ export default function Posts({ posts }) {
 
               <div>
                 <strong>{post.author.name}</strong>
-                <time dateTime={post.createdAt}>{prettyDate}</time>
+                <p>{dateDisplay}</p>
               </div>
             </div>
 
