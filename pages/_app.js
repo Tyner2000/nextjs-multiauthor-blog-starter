@@ -13,7 +13,11 @@ export default function App({ Component, pageProps }) {
                 Home
               </Link>
             </li>
-
+            <li>
+              <Link href="/series">
+                Series
+              </Link>
+            </li>
             <li>
               <Link href="/posts">
                 Posts
