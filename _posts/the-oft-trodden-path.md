@@ -49,8 +49,6 @@ His child was sick and he needed to see the doctor in the town to the north.
 
 Entering the village, passersby glanced frequently, stared more sparingly, and jeered to one another readily. James, strong-willed as he was, put forth an effort to ignore their prejudgements and continue what may-or-may-not have been a slow and somber journey.
 
----
-
 Shaking off the grips of sleep as they closed in had become more difficult than James imagined.
 
 It seemed as though sleep had been slowly conspiring to steal from him his eyes and ears.

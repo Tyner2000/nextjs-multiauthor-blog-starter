@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import styles from '../../styles/post.module.css'
 
 import { getAllPosts, getAuthorBySlug, getPostBySlug } from '../../lib/api'
 
 export default function Post({ post }) {
   if (post.date === "archive") {
-    var dateDisplay = "From Archive."
+    var dateDisplay = "From the Archive."
   } 
   else {
     var dateDisplay = post.date
@@ -13,23 +14,23 @@ export default function Post({ post }) {
 
   return (
     <div className="post">
-      <h1>{post.title}</h1>
-
-      <div>
-        <Image alt={post.author.name} src={post.author.profilePictureUrl} height={40} width={40} />
-
-        <div>
-          <strong>
-            <Link href={post.author.permalink}>
-              {post.author.name}
-            </Link>
-          </strong>
-
+      <div className={styles.post_container}>
+        <div className={styles.post_title}>
+          <h1>{post.title}</h1>
           <p>{dateDisplay}</p>
         </div>
+        <div className={styles.author_mini_card}>
+            <div className={styles.author_mini_card_profile}>
+              <img alt={post.author.name} src={post.author.profilePictureUrl}/>
+            </div>
+            <div className={styles.author_mini_card_content}>
+              <strong><Link href={post.author.permalink}>
+                {post.author.name}
+              </Link></strong>
+            </div>
+        </div>
+        <div className={styles.post_body} dangerouslySetInnerHTML={{ __html: post.body }} />
       </div>
-
-      <div dangerouslySetInnerHTML={{ __html: post.body }} />
     </div>
   )
 }

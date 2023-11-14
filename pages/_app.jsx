@@ -2,29 +2,32 @@ import Link from 'next/link'
 
 import '../styles/globals.css'
 
+import { Roboto_Slab } from 'next/font/google'
+
+const roboto = Roboto_Slab({ subsets: ['latin'] })
+
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <header>
+      <header className={roboto.className}>
         <nav>
           <ul>
-            <li>
+            <li className="nav_item">
               <Link href="/">
                 Home
               </Link>
             </li>
-            <li>
+            <li className="nav_item">
               <Link href="/series">
                 Series
               </Link>
             </li>
-            <li>
+            <li className="nav_item">
               <Link href="/posts">
                 Posts
               </Link>
             </li>
-
-            <li>
+            <li className="nav_item">
               <Link href="/authors">
                 Authors
               </Link>
@@ -32,10 +35,14 @@ export default function App({ Component, pageProps }) {
           </ul>
         </nav>
       </header>
-
-      <main>
+      <main className={roboto.className}>
         <Component {...pageProps} />
       </main>
+      <div className="footer_container">
+        <footer className={roboto.className}>
+          <p>(c) Tyner Roycroft, 2023.</p>
+        </footer>
+      </div>
     </>
   )
 }

@@ -1,23 +1,30 @@
 .container {
   min-height: 100vh;
-  padding-top: 4rem;
+  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  height: 100vh;
+}
+
+.landing_container {
+  min-height: 100vh;
+  background-color: #fff;
+  padding-left: 4rem;
+  right: 4rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main {
-  min-height: 100%;
-  background-color: #fff;
   padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%
 }
 
 .root_index_description {
@@ -31,6 +38,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .title a {
@@ -59,6 +73,27 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.landing_title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.series_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.unorganized_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section_card {
+  margin: 1rem;
 }
 
 .code {

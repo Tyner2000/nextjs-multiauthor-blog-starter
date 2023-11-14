@@ -1,5 +1,5 @@
 ---
-title: "The Tauring Bazaar"
+title: "The Taurine Bazaar"
 excerpt: "Welcome..."
 date: "archive"
 series: single

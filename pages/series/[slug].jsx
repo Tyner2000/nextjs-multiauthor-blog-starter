@@ -5,12 +5,9 @@ import { getAllSeries, getAllPosts, getSeriesBySlug } from '../../lib/api'
 
 export default function Series({ series }) {
   return (
-    <div className="author">
+    <div className="series">
       <h1>{series.name}</h1>
-
-      <h2>Posts</h2>
-
-      <ul>
+      <ol>
         {series.posts.map(post => (
           <li key={post.slug}>
             <Link href={post.permalink}>
@@ -18,7 +15,7 @@ export default function Series({ series }) {
             </Link>
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   )
 }
