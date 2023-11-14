@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/post.module.css'
+import { textFont, titleFont } from "../../utils/fonts";
 
 import { getAllPosts, getAuthorBySlug, getPostBySlug } from '../../lib/api'
 
@@ -14,22 +15,24 @@ export default function Post({ post }) {
 
   return (
     <div className="post">
-      <div className={styles.post_container}>
+      <div  className={styles.post_container}>
         <div className={styles.post_title}>
-          <h1>{post.title}</h1>
-          <p>{dateDisplay}</p>
+          <h1 className={titleFont.className}>{post.title}</h1>
+          <p className={titleFont.className}>{dateDisplay}</p>
         </div>
         <div className={styles.author_mini_card}>
             <div className={styles.author_mini_card_profile}>
               <img alt={post.author.name} src={post.author.profilePictureUrl}/>
             </div>
             <div className={styles.author_mini_card_content}>
-              <strong><Link href={post.author.permalink}>
+              <strong><Link className={textFont.className} href={post.author.permalink}>
                 {post.author.name}
               </Link></strong>
             </div>
         </div>
-        <div className={styles.post_body} dangerouslySetInnerHTML={{ __html: post.body }} />
+        <div className={styles.post_body}>
+          <div className={textFont.className} dangerouslySetInnerHTML={{ __html: post.body }} />
+        </div>
       </div>
     </div>
   )

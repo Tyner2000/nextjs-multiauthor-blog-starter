@@ -2,25 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { getAllAuthors, getAllPosts, getAuthorBySlug } from '../../lib/api'
+import { textFont, titleFont } from "../../utils/fonts";
 
 export default function Author({ author }) {
   return (
     <div className="author">
-      <h1>{author.name}</h1>
-
-      <Image alt={author.name} src={author.profilePictureUrl} height={120} width={120} />
-
-      <h2>Posts</h2>
-
-      <ul>
-        {author.posts.map(post => (
-          <li key={post.slug}>
-            <Link href={post.permalink}>
-              {post.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="author_page_container">
+        <div className="author_page_contents">
+          <h1 className={titleFont.className}>{author.name}</h1>
+          <p className={textFont.className}>This is some text that is going to live inside of this section tag. This content is not meant to mean anything nor is it meant to be permanent, in fact, it is only filler text. This is some text that is going to live inside of this section tag. This content is not meant to mean anything nor is it meant to be permanent, in fact, it is only filler text.</p>
+        </div>
+      </div>
     </div>
   )
 }

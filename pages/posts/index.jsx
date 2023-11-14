@@ -1,45 +1,45 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import styles from '../../styles/post.module.css'
+
 import { getAllPosts, getAuthorBySlug } from '../../lib/api'
+import { textFont, titleFont } from "../../utils/fonts";
 
 export default function Posts({ posts }) {
   return (
     <div className="posts">
-      <h1 className="post_header">Posts</h1>
-
-      {posts.map(post => {
-        if (post.date === "archive") {
-          var dateDisplay = "From Archive."
-        } 
-        else {
-          var dateDisplay = post.date
-        } 
-        return (
-          <article className="post_page_card" key={post.slug}>
-            <h2>
-              <Link href={post.permalink}>
-                {post.title}
+      <h1 className={titleFont.className}>Posts</h1>
+      <div className="post_card_container">
+        {posts.map(post => {
+          if (post.date === "archive") {
+            var dateDisplay = "From the Archive."
+          } 
+          else {
+            var dateDisplay = post.date
+          }
+          return (
+            <article className="post_page_card" key={post.slug}>
+              <h2 className="post_page_card_title">
+                <Link className={titleFont.className} href={post.permalink}>
+                  {post.title}
+                </Link>
+                <p className={textFont.className}>-- {dateDisplay}</p>
+              </h2>
+              <p className={textFont.className}>"{post.excerpt}"</p>
+              <Link className="post_page_card_read_more" href={post.permalink}>
+                Read more →
               </Link>
-            </h2>
-
-            <p>{post.excerpt}</p>
-
-            <div>
-              <Image alt={post.author.name} src={post.author.profilePictureUrl} height={40} width={40} />
-
-              <div>
-                <strong>{post.author.name}</strong>
-                <p>{dateDisplay}</p>
+              <div className="post_page_card_profile">
+                <img alt={post.author.name} src={post.author.profilePictureUrl} />
+                <div className="post_page_card_author">
+                  <strong>{post.author.name}</strong>
+                </div>
               </div>
-            </div>
-
-            <Link href={post.permalink}>
-              Read more →
-            </Link>
-          </article>
-        )
-      })}
+            </article>
+          )
+        })}
+      </div>
     </div>
   )
 }
