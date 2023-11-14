@@ -11,20 +11,20 @@ export default function App({ Component, pageProps }) {
     <>
       <header className={roboto.className}>
         <nav>
-          <ul>
+          <ul className="nav_ul">
             <li className="nav_item">
               <Link href="/">
                 Home
               </Link>
             </li>
             <li className="nav_item">
-              <Link href="/series">
-                Series
+              <Link href="/posts">
+                Posts
               </Link>
             </li>
             <li className="nav_item">
-              <Link href="/posts">
-                Posts
+              <Link href="/series">
+                Series
               </Link>
             </li>
             <li className="nav_item">

@@ -11,8 +11,8 @@ a, a:visited {
 
 body {
   min-height: 100%;
-  background-color: #fafafa;
-  color: rgba(75, 85, 99);
+  background-color: #eee;
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -71,11 +71,17 @@ header {
   margin-right: auto;
 }
 
+.nav_ul {
+  padding-inline-start: 0px !important;
+}
+
 header nav {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 header nav {
@@ -91,7 +97,6 @@ header nav {
 
 header ul {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -107,8 +112,8 @@ header li + li {
 }
 
 header a, header a:visited {
-  color: #333;
-  font-weight: bold;
+  color: #444;
+  font-weight: 400;
   font-size: 1.2rem;
 }
 
