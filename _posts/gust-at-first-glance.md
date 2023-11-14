@@ -1,7 +1,7 @@
 ---
 title: "Gust: At First Glance."
 excerpt: "Before he had traveled here, he had wondered at the grandeur of this place. Even today, it captivated his curiosity, and lighted his body with anticipation: a barren wasteland, rich with industry, and teeming with local and imported life alike."
-date: "10-02-23"
+date: "10-06-23"
 series: gust
 author: tyner
 ---

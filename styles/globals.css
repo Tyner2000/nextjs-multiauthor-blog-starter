@@ -5,13 +5,13 @@
 }
 
 a, a:visited {
-  color: rgb(37, 99, 235);
-  text-decoration: none;
+  color: #000;
+  text-decoration: underline;
 }
 
 body {
   min-height: 100%;
-  background-color: #eee;
+  background-color: #fff;
   color: #333;
   margin: 0;
   padding: 0;
@@ -112,9 +112,10 @@ header li + li {
 }
 
 header a, header a:visited {
-  color: #444;
+  color: #000;
   font-weight: 400;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 main {
@@ -184,6 +185,17 @@ main {
 
 .post {}
 
+.post_header {
+  padding-left: 12%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(165deg, #fefefe, #e6e6e6);
+  box-shadow:  8px 8px 16px #828282,
+               -8px -8px 16px #ffffff;
+}
+
 .post > div {
   align-items: center;
   display: flex;
@@ -207,9 +219,22 @@ main {
   margin-top: 1.25rem;
 }
 
-.posts {}
+.posts {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.posts > article {}
+.posts > article {
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(165deg, #fefefe, #e6e6e6);
+  box-shadow:  8px 8px 16px #828282,
+               -8px -8px 16px #ffffff;
+}
 
 .posts > article > a {
   font-size: 14px;

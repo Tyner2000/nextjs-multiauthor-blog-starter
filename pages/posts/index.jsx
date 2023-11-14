@@ -6,7 +6,7 @@ import { getAllPosts, getAuthorBySlug } from '../../lib/api'
 export default function Posts({ posts }) {
   return (
     <div className="posts">
-      <h1>Posts</h1>
+      <h1 className="post_header">Posts</h1>
 
       {posts.map(post => {
         if (post.date === "archive") {
@@ -15,9 +15,8 @@ export default function Posts({ posts }) {
         else {
           var dateDisplay = post.date
         } 
-
         return (
-          <article key={post.slug}>
+          <article className="post_page_card" key={post.slug}>
             <h2>
               <Link href={post.permalink}>
                 {post.title}
