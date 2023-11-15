@@ -5,19 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-}
-
-.main {
-  min-height: 100%;
-  background-color: #fff;
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%
+  width: 70%;
 }
 
 .root_index_description {
