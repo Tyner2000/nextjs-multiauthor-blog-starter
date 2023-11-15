@@ -17,17 +17,10 @@ body {
   padding: 0;
 }
 
-.index_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: center;
-}
-
 .index_title h1 {
   margin-left: auto;
   margin-right: auto;
-  margin-top: -16rem;
+  margin-top: auto;
   font-size: 4.25rem;
   line-height: 6rem;
   width: 100%;
